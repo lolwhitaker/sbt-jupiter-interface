@@ -1,6 +1,3 @@
-lazy val pluginVersion = IO.readLines(file("../version.sbt"))
-  .filter(_.startsWith("version in ThisBuild"))
-  .map(line => line.substring(line.indexOf('"')+1, line.lastIndexOf('"')))
-  .head
+lazy val pluginVersion = "0.8.2"
 
 addSbtPlugin("net.aichler" % "sbt-jupiter-interface" % pluginVersion)
